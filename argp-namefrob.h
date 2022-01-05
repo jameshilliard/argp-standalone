@@ -134,16 +134,6 @@
 #define putchar_unlocked(x) putchar(x)
 #endif
 
-#if defined(HAVE_STRCHRNUL) && !HAVE_STRCHRNUL
-char*
-strchrnul(const char* s, int c);
-#endif
-
-#if defined(HAVE_MEMPCPY) && !HAVE_MEMPCPY
-void*
-mempcpy(void* to, const void* from, size_t size);
-#endif
-
 extern char*
 __argp_basename(char* name);
 
@@ -151,11 +141,4 @@ __argp_basename(char* name);
 
 #ifndef __set_errno
 #define __set_errno(e) (errno = (e))
-#endif
-
-#if 0 || HAVE_DECL_PROGRAM_INVOCATION_SHORT_NAME
-#define __argp_short_program_name() (program_invocation_short_name)
-#else
-extern char*
-__argp_short_program_name(void);
 #endif
