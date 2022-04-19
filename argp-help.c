@@ -55,7 +55,7 @@ alloca();
 
 #ifndef _
 /* This is for other GNU distributions with internationalized messages.  */
-#if HAVE_LIBINTL_H
+#if defined(HAVE_LIBINTL_H)
 #include <libintl.h>
 #if 0
 #undef dgettext
