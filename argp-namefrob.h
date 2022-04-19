@@ -156,5 +156,6 @@ __argp_basename(char* name);
 #if HAVE_DECL_PROGRAM_INVOCATION_SHORT_NAME
 #define __argp_short_program_name() (program_invocation_short_name)
 #else
-extern char* __argp_short_program_name(const struct argp_state* state);
+extern char*
+__argp_short_program_name(const struct argp_state* state);
 #endif

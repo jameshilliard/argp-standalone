@@ -210,7 +210,7 @@ ARGP_FS_EI size_t
 __argp_fmtstream_set_lmargin(argp_fmtstream_t __fs, size_t __lmargin)
 {
     size_t __old;
-    if ((size_t)(__fs->p - __fs->buf) > __fs->point_offs)
+    if ((size_t) (__fs->p - __fs->buf) > __fs->point_offs)
         __argp_fmtstream_update(__fs);
     __old = __fs->lmargin;
     __fs->lmargin = __lmargin;
@@ -222,7 +222,7 @@ ARGP_FS_EI size_t
 __argp_fmtstream_set_rmargin(argp_fmtstream_t __fs, size_t __rmargin)
 {
     size_t __old;
-    if ((size_t)(__fs->p - __fs->buf) > __fs->point_offs)
+    if ((size_t) (__fs->p - __fs->buf) > __fs->point_offs)
         __argp_fmtstream_update(__fs);
     __old = __fs->rmargin;
     __fs->rmargin = __rmargin;
@@ -234,7 +234,7 @@ ARGP_FS_EI size_t
 __argp_fmtstream_set_wmargin(argp_fmtstream_t __fs, size_t __wmargin)
 {
     size_t __old;
-    if ((size_t)(__fs->p - __fs->buf) > __fs->point_offs)
+    if ((size_t) (__fs->p - __fs->buf) > __fs->point_offs)
         __argp_fmtstream_update(__fs);
     __old = __fs->wmargin;
     __fs->wmargin = __wmargin;
@@ -245,7 +245,7 @@ __argp_fmtstream_set_wmargin(argp_fmtstream_t __fs, size_t __wmargin)
 ARGP_FS_EI size_t
 __argp_fmtstream_point(argp_fmtstream_t __fs)
 {
-    if ((size_t)(__fs->p - __fs->buf) > __fs->point_offs)
+    if ((size_t) (__fs->p - __fs->buf) > __fs->point_offs)
         __argp_fmtstream_update(__fs);
     return __fs->point_col >= 0 ? __fs->point_col : 0;
 }

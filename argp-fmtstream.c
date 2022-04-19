@@ -346,7 +346,7 @@ __argp_fmtstream_update(argp_fmtstream_t fs)
 int
 __argp_fmtstream_ensure(struct argp_fmtstream* fs, size_t amount)
 {
-    if ((size_t)(fs->end - fs->p) < amount)
+    if ((size_t) (fs->end - fs->p) < amount)
     {
         ssize_t wrote;
 
@@ -372,7 +372,7 @@ __argp_fmtstream_ensure(struct argp_fmtstream* fs, size_t amount)
             return 0;
         }
 
-        if ((size_t)(fs->end - fs->buf) < amount)
+        if ((size_t) (fs->end - fs->buf) < amount)
         /* Gotta grow the buffer.  */
         {
             size_t old_size = fs->end - fs->buf;

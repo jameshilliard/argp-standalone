@@ -575,46 +575,46 @@ reflect ARGP_LONG_ONLY mode.  */
     extern char* _argp_short_program_name(const struct argp_state* state) __THROW;
     extern char* __argp_short_program_name(const struct argp_state* state) __THROW;
 
-// #ifdef __USE_EXTERN_INLINES
-// #if 1
-// #define __argp_usage argp_usage
-// #define __argp_state_help argp_state_help
-// #define __option_is_short _option_is_short
-// #define __option_is_end _option_is_end
-// #endif
+    // #ifdef __USE_EXTERN_INLINES
+    // #if 1
+    // #define __argp_usage argp_usage
+    // #define __argp_state_help argp_state_help
+    // #define __option_is_short _option_is_short
+    // #define __option_is_end _option_is_end
+    // #endif
 
-// #ifndef ARGP_EI
-// #define ARGP_EI extern __inline
-// #endif
+    // #ifndef ARGP_EI
+    // #define ARGP_EI extern __inline
+    // #endif
 
-//     ARGP_EI void __THROW __argp_usage(__const struct argp_state* __state)
-//     {
-//         __argp_state_help(__state, stderr, ARGP_HELP_STD_USAGE);
-//     }
+    //     ARGP_EI void __THROW __argp_usage(__const struct argp_state* __state)
+    //     {
+    //         __argp_state_help(__state, stderr, ARGP_HELP_STD_USAGE);
+    //     }
 
-//     ARGP_EI int __THROW __option_is_short(__const struct argp_option* __opt)
-//     {
-//         if (__opt->flags & OPTION_DOC)
-//             return 0;
-//         else
-//         {
-//             int __key = __opt->key;
-//             return __key > 0 && isprint(__key);
-//         }
-//     }
+    //     ARGP_EI int __THROW __option_is_short(__const struct argp_option* __opt)
+    //     {
+    //         if (__opt->flags & OPTION_DOC)
+    //             return 0;
+    //         else
+    //         {
+    //             int __key = __opt->key;
+    //             return __key > 0 && isprint(__key);
+    //         }
+    //     }
 
-//     ARGP_EI int __THROW __option_is_end(__const struct argp_option* __opt)
-//     {
-//         return !__opt->key && !__opt->name && !__opt->doc && !__opt->group;
-//     }
+    //     ARGP_EI int __THROW __option_is_end(__const struct argp_option* __opt)
+    //     {
+    //         return !__opt->key && !__opt->name && !__opt->doc && !__opt->group;
+    //     }
 
-// #if 1
-// #undef __argp_usage
-// #undef __argp_state_help
-// #undef __option_is_short
-// #undef __option_is_end
-// #endif
-// #endif /* Use extern inlines.  */
+    // #if 1
+    // #undef __argp_usage
+    // #undef __argp_state_help
+    // #undef __option_is_short
+    // #undef __option_is_end
+    // #endif
+    // #endif /* Use extern inlines.  */
 
 #ifdef __cplusplus
 }
