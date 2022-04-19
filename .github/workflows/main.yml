@@ -69,6 +69,6 @@ jobs:
         shell: cmd /C CALL {0}
         if: runner.os == 'Windows'
         run: |
-          CALL micromamba activate argp_build_env
+          CALL micromamba activate meson_build_env
           meson setup builddir
           meson compile -C builddir
