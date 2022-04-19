@@ -19,7 +19,7 @@ jobs:
       - name: install mamba
         uses: mamba-org/provision-with-micromamba@main
         with:
-          environment-file: .github/environment.yml
+          environment-file: .github/autoconf_build_env.yml
       - name: Configure argp
         shell: bash -l {0}
         run: |
